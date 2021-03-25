@@ -29,6 +29,8 @@ class DB{
      * @param string name of the table
      * @param array select, where, order_by, limit and return_type conditions
      */
+
+    
     public function getRows($table, $conditions = array()){
         $sql = 'SELECT ';
         $sql .= array_key_exists("select",$conditions)?$conditions['select']:'*';
@@ -86,6 +88,25 @@ class DB{
 
 
     }
+     public function submitUserData($table,$username, $password){
+        //  $query = "SELECT username from ".$table."  WHERE username='.$username.' and password='.$password.'";
+        
+       $getData=mysqli_query($this->db,"SELECT `username` FROM `login` WHERE `username`='$username' AND `password`='$password'");
+        if(mysqli_num_rows($getData) >= 1){
+          $result = "success";
+       } else{
+          $result ="error";
+       }
+
+         // $data = "hello";
+        // $result = $this->db->query($query);
+        // echo $result;
+        // $finalData = '';
+        // while ($row = $result->fetch_assoc()) {
+        // $finalData = $row['username']."<br>";
+        // }
+        return  $result;
+     }
     public function getFullData($table){
         $query = "SELECT * FROM '.$table.'";
         $completeData = $this->db->query($query);

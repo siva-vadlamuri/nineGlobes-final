@@ -6,35 +6,7 @@ $db = new DB();
 // Database table name
 $tblName = 'users';
 
-if(!empty($_POST['exceldata'])){
-    $con=mysqli_connect('localhost','root','','ninegloab');
-if(isset($_POST['excelsubmit'])){
-	$file=$_FILES['doc']['tmp_name'];
-	
-	$ext=pathinfo($_FILES['doc']['name'],PATHINFO_EXTENSION);
-	if($ext=='xlsx'){
-		require('PHPExcel/PHPExcel.php');
-		require('PHPExcel/PHPExcel/IOFactory.php');
-		
-		
-		$obj=PHPExcel_IOFactory::load($file);
-		foreach($obj->getWorksheetIterator() as $sheet){
-			$getHighestRow=$sheet->getHighestRow();
-			for($i=0;$i<=$getHighestRow;$i++){
-				$name=$sheet->getCellByColumnAndRow(0,$i)->getValue();
-				$email=$sheet->getCellByColumnAndRow(1,$i)->getValue();
-				if($name!=''){
-					mysqli_query($con,"insert into excel(name,email) values('$name','$email')");
-				}
-			}
-		}
-	}else{
-		echo "Invalid file format";
-	}
-}
 
-
-}
 
 if(!empty($_POST['search'])){
 $filter = $_POST["search"];
