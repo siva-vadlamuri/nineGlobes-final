@@ -10,24 +10,21 @@ $users = $db->getRows('users');
 <!DOCTYPE html>
 <html>
 <head>
-	<title>9Globes Lead Track</title>	
+	<title>AchieversIT Lead Track</title>	
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
      <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="" />
-    <title>9Golbes Technologies Online Traninig Course- Enrol Today</title>
-    <meta name="description" content="9Golbes Technologies" />
+    <title>AchieversIT Traninig Insititute- Enroll Today</title>
+    <meta name="description" content="" />
     <meta name="keywords" content="9Golbes Technologies" />
     <link rel="canonical" href="#" />
     <!-- Open Graph Start Code -->
-    <meta property="og:type" content="business.business" />
-    <meta property="og:title" content="9Golbes Technologies" />
-    <meta property="og:url" content="#" />
-    <meta property="og:image" content="#" />
-    <link rel="icon" href="images/9globes.jpg" sizes="32x32" />
+       <link rel="icon" href="https://www.achieversit.com/assets/images/AIT-white.jpg" sizes="32x32" />
     <!--    CSS-->
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+   
     <style>
     .form-group{
             display: inline-block;
@@ -42,8 +39,8 @@ $users = $db->getRows('users');
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-3 col-sm-12">
-                    <a href="#" class="Globeslogo"><img src="images/9globes.jpg" alt="9Golbes Technologies"
-                            title="9Golbes Technologies" /></a>
+                    <a href="#" class="Globeslogo"><img src="https://www.achieversit.com/assets/images/AIT-white.jpg" alt="AchieversIT-logo"
+                            title="AchieversIT Training Institute" /></a>
                         
                     <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -60,10 +57,7 @@ $users = $db->getRows('users');
             </div>
         </div>
     </header>
-   <form method="post" enctype="multipart/form-data">
-	<input type="file" name="doc"/>
-	<input type="submit" id="excel" name="excelsubmit"/>
-</form>
+   
     <div class="search-bar-div">
     <div class="container ">
         <div class="row">
